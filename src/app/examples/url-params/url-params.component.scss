@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  height: calc(100vh - 228px);
+  padding: 0 32px;
+  background: linear-gradient(180deg, #09212a 0%, #103645 50%, #09212a 100%);
+}
+
+.red{
+  background-color: #FD5B4F;
+}
+
+.green{
+  background-color: #40d884;
+}
+
+.blue{
+  background-color: #235bcc;
+}
+

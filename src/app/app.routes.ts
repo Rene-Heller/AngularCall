@@ -6,6 +6,8 @@ import { ServiceExampleComponent } from './examples/service-example/service-exam
 import { DirectiveExampleComponent } from './examples/directive-example/directive-example.component';
 import { PipeExampleComponent } from './examples/pipe-example/pipe-example.component';
 import { DecoratorExampleComponent } from './examples/decorator-example/decorator-example.component';
+import { ScrollHorizontalComponent } from './examples/scroll-horizontal/scroll-horizontal.component';
+import { UrlParamsComponent } from './examples/url-params/url-params.component';
 
 export const routes: Routes = [
     { path: '', component:MainContentComponent },
@@ -14,5 +16,7 @@ export const routes: Routes = [
     { path: 'service', component:ServiceExampleComponent },
     { path: 'directive', component:DirectiveExampleComponent },
     { path: 'pipe', component:PipeExampleComponent },
-    { path: 'decorator', component:DecoratorExampleComponent }
+    { path: 'decorator', component:DecoratorExampleComponent },
+    { path: 'scroll', component:ScrollHorizontalComponent },
+    { path: 'url-params', component:UrlParamsComponent },
 ];

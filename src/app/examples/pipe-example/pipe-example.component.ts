@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-pipe-example',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './pipe-example.component.scss'
 })
 export class PipeExampleComponent {
+  pipeValue = signal('test');
+
+  constructor() {
+    setTimeout(()=>{this.pipeValue.set("bestanden")}, 6000)
+  }
 
 }

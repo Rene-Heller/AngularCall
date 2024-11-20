@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import {  RouterLink } from '@angular/router';
+import {CdkDrag} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-component-example',
   standalone: true,
-  imports: [ RouterLink],
+  imports: [ 
+    RouterLink,
+    CdkDrag],
   templateUrl: './component-example.component.html',
   styleUrl: './component-example.component.scss'
 })

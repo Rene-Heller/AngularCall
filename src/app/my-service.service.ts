@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class MyServiceService {
 
   constructor() { }
+
+  testFunction(){
+    console.log("hallo welt!")
+  }
 }
