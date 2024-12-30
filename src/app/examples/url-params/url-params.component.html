@@ -1,5 +1,5 @@
 <div class="absolute m-auto inset-0 w-fit flex h-8 text-[#ffffff]">
-  <input type="text" class="rounded-2xl  p-4 text-daBlue_95" name="" #urlInput>
+  <input type="text" class="rounded-2xl  p-4 text-daBlue_95" name="" #urlInput (input)="consoleValue($event)">
   <button (click)="changeUrl()" class=" px-4 bg-daRed_40 rounded-2xl mx-4">Change URL</button>
 </div>
 
@@ -7,7 +7,7 @@
 
   <div [ngClass]="urlBackground" class="rounded-2xl justify-center items-center flex p-4">
     @if(firstSrc || allSrcs){
-      <img class="w-full flex h-full" src="assets/img/fruits/apple.png" alt="">
+    <img class="w-full flex h-full" src="assets/img/fruits/apple.png" alt="">
     }
     @else{<div>
       Nichts zu sehen :)
@@ -15,7 +15,7 @@
   </div>
   <div [ngClass]="urlBackground" class="rounded-2xl justify-center items-center flex p-4">
     @if(secondSrc || allSrcs){
-      <img class="w-full flex h-full" src="assets/img/fruits/banana.png" alt="">
+    <img class="w-full flex h-full" src="assets/img/fruits/banana.png" alt="">
     }
     @else{<div>
       Nichts zu sehen :)
@@ -23,7 +23,7 @@
   </div>
   <div [ngClass]="urlBackground" class="rounded-2xl justify-center items-center flex p-4">
     @if(thirdSrc || allSrcs){
-      <img class="w-full flex h-full" src="assets/img/fruits/cherry.png" alt="">
+    <img class="w-full flex h-full" src="assets/img/fruits/cherry.png" alt="">
     }
     @else{<div>
       Nichts zu sehen :)
@@ -31,7 +31,7 @@
   </div>
   <div [ngClass]="urlBackground" class="rounded-2xl justify-center items-center flex p-4">
     @if(fourthSrc || allSrcs){
-      <img class="w-full flex h-full" src="assets/img/fruits/lemon.png" alt="">
+    <img class="w-full flex h-full" src="assets/img/fruits/lemon.png" alt="">
     }
     @else{<div>
       Nichts zu sehen :)

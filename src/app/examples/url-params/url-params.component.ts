@@ -14,12 +14,13 @@ export class UrlParamsComponent {
   @ViewChild('urlInput') urlInputRef: ElementRef | undefined;
   queryParams: { [key: string]: string } = {};
   urlInput = "";
-  urlBackground= "bg-daBlue_70";
+  urlBackground = "bg-daBlue_70";
   allSrcs = false;
   firstSrc = false;
   secondSrc = false;
   thirdSrc = false;
   fourthSrc = false;
+  text = ""
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
@@ -55,6 +56,12 @@ export class UrlParamsComponent {
     });
 
     return params;
+  }
+
+  consoleValue(event: any) {
+
+    console.log(event.target.value)
+    this.text = event.target.value
   }
 
 }
