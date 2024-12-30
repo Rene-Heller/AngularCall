@@ -3,26 +3,39 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-main-content',
-  standalone: true,
   imports: [CommonModule],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+  styleUrl: './main-content.component.scss',
+  standalone: true
 })
 export class MainContentComponent {
+  xCenter = window.innerWidth / 2;
+  start = { x: this.xCenter, y: 100 };
 
   keywords = [
-    { text: 'Form', x: 200, y: 100 },
-    { text: 'Reactive', x: 400, y: 200 },
-    { text: 'Template Driven', x: 400, y: 300 },
-    { text: 'Usage', x: 600, y: 250 }
+    { text: 'prerequisite', x: this.xCenter - 30, y: 100 },
+    { text: 'HTML', x: 400, y: 200 },
+    { text: 'CSS', x: 400, y: 200 },
+    { text: 'Javascript', x: 600, y: 200 },
+    { text: 'Typescript', x: 400, y: 200 },
+    { text: 'Git', x: 400, y: 200 },
+    { text: 'NodeJS', x: 600, y: 200 },
+    { text: 'SOLID', x: 600, y: 200 }
   ];
 
+  constructor() {
+    for (let i = 1; i < this.keywords.length; i++) {
+      this.keywords[i].x = window.innerWidth / (this.keywords.length + 1) * (i + 1);
+    }
+  }
+
   // Berechnung des Pfads für eine Bézier-Kurve
-  calculatePath(start: { x: number; y: number }, end: { x: number; y: number }): string {
+  calculatePath(end: { x: number; y: number }): string {
+    const start = this.start;
     const controlX1 = (start.x + end.x) / 2;
-    const controlY1 = start.y - 50;
+    const controlY1 = start.y;
     const controlX2 = (start.x + end.x) / 2;
-    const controlY2 = end.y + 50;
+    const controlY2 = end.y - 100;
 
     return `M ${start.x} ${start.y}
             C ${controlX1} ${controlY1},

@@ -1,20 +1,25 @@
 <main>
   <!-- svg-animation.component.html -->
-  <svg width="800" height="600">
+  <svg width="window.innerWidth" height="600">
     <!-- Zeichnet dynamische Kurven zwischen Keywords -->
     @for(word of keywords; track word.text; let i = $index) {
-    @let start = word.x , word.y
+
     <ng-container>
-      <ng-container *ngIf="keywords[i + 1] as end">
-        <path [attr.d]="calculatePath(i.c, end)" fill="none" class="stroke-daRed_40" stroke-width="2"
-          stroke-dasharray="300" stroke-dashoffset="300">
+      @if(keywords[i + 1]) {
+      @let end = keywords[i + 1];
+
+      <ng-container>
+        <path [attr.d]="calculatePath( end)" fill="none" class="stroke-daRed_40" stroke-width="2" stroke-dasharray="800"
+          stroke-dashoffset="100">
           <animate attributeName="stroke-dashoffset" from="300" to="0" dur="1s" fill="freeze"></animate>
         </path>
       </ng-container>
+      }
     </ng-container>
 
     <!-- Texte für die Keywords -->
-    <text *ngFor="let keyword of keywords" [attr.x]="keyword.x" [attr.y]="keyword.y - 10" font-size="14" fill="white">
+    <text *ngFor="let keyword of keywords" [attr.x]="keyword.x -20" [attr.y]="keyword.y + 20" font-size="14"
+      fill="white">
       {{ keyword.text }}
     </text>
     }

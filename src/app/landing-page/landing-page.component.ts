@@ -3,11 +3,10 @@ import { Component, inject, Input } from '@angular/core';
 import { MyServiceService } from '../my-service.service';
 
 @Component({
-  selector: 'app-landing-page',
-  standalone: true,
-  imports: [],
-  templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss'
+    selector: 'app-landing-page',
+    imports: [],
+    templateUrl: './landing-page.component.html',
+    styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
   @Input() items: string[] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];

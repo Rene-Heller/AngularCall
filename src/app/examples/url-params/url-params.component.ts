@@ -3,11 +3,10 @@ import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-url-params',
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: './url-params.component.html',
-  styleUrl: './url-params.component.scss'
+    selector: 'app-url-params',
+    imports: [NgClass],
+    templateUrl: './url-params.component.html',
+    styleUrl: './url-params.component.scss'
 })
 export class UrlParamsComponent {
 
