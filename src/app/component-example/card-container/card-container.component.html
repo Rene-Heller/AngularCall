@@ -1,0 +1,13 @@
+<div class="flex gap-6">
+  <!-- ################## REDUCE - BUTTON ################## -->
+  <button type="button" (click)="reduceToOne()" class="btn-blue">Reduce to One</button>
+  <h2 class="text-2xl font-bold">Card Container</h2>
+  <!-- ################## DOUBLE - BUTTON ################## -->
+  <button type="button" (click)="doubleCards()" class="btn-green">Double cards</button>
+</div>
+<section id="card-container" class="container">
+  @for(card of cardList; track i; let i = $index) {
+  <app-card [(text)]="card.text" [title]="card.title + ' ' + i"></app-card>
+  <!-- Fail == Zwei mal card.title -->
+  }
+</section>

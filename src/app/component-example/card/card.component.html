@@ -1,0 +1,25 @@
+<section class="card">
+  <div class="min-h-[72px]">
+
+    <!-- #region Models -->
+
+    <!-- ################## MODEL - 1 ################## -->
+    <h4 id="title" class="font-bold">{{title()}}</h4>
+
+    <!-- ################## MODEL - 2 ################## -->
+    <input #input (input)="text.set(input.value)" id="description" class="w-[100%] border-daBlue_95 border-2"
+      type="text" [value]="text()">
+
+    <!-- #endregion -->
+
+  </div>
+
+  <!-- #region Button -->
+
+  <button id="clear-btn" (click)="clear()" type="button" class="btn-red">
+    Clear
+  </button>
+
+  <!-- #endregion -->
+
+</section>

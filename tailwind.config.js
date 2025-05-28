@@ -36,10 +36,10 @@ module.exports = {
         '1400': '1400px',
         '1410': '1440px',
         '1570': '1570px',
-        'max-500': {'max': '500px'},
-        'max-900': {'max': '900px'},
+        'max-500': { 'max': '500px' },
+        'max-900': { 'max': '900px' },
         'max-h850-min-w': { 'raw': '(min-width: 900px) and (max-height: 850px)' },
-        'notebook-breakpoint':{'raw': '(min-width: 900px) and (max-height: 1024px)'}
+        'notebook-breakpoint': { 'raw': '(min-width: 900px) and (max-height: 1024px)' }
       },
 
       width: {
