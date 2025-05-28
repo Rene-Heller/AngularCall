@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0 16px;
+  min-height: calc(100vh - 228px);
+  background: linear-gradient(180deg, #09212a 0%, #103645 50%, #09212a 100%);
+}
